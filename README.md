@@ -9,13 +9,14 @@ $\gamma$-rays, we provide comprehensive tutorial notebooks to analyze the models
 
 ## Contents
 
+
 ## Environment and dependencies
 The models have been generated using the softwares:
 - MINOT (python package, https://github.com/remi-adam/minot)
 - CLUMPY 3.1.1 (C++ software, https://clumpy.gitlab.io/CLUMPY/v3.1.1/)
 
 The tutorial notebooks have been developed for Jupyter Notebook using Python 3.9.19. The create the intensity maps containing the emission models we use the python package:
-- gammapy 1.1 (https://gammapy.org/)
+- `gammapy` 1.1 (https://gammapy.org/)
 
 Some packages already included in `gammapy` that we also use are:
 - `numpy`
@@ -26,6 +27,12 @@ Some packages already included in `gammapy` that we also use are:
 All of this softwares and packages can be installed with `conda env` and/or `pip install` (please check each one individually).
 
 ## Sample selection
+The sample contains 48 galaxy clusters, which all of them fullfill the following criteria:
+- $z<0.1$;
+- separated at least, 2 deg, between each cluster, where their angular extension is defined as $\theta_{200} = R_{200}/d_L$, where $R_{200} is the radius within which the mean cluster density is 200 times the critical density of the Universe at the cluster’s redshift, and $d_{L}$ its luminosity distance;
+- $|b|> 20$ deg, where $b$ is galactic latitude, to avoid contamination from the galactic diffuse emission from the galactic plane.
+
+Their $M_{500}$ masses are obtained from the X-ray catalogue MCXC (https://heasarc.gsfc.nasa.gov/W3Browse/rosat/mcxc.html), and extrapolated up to $M_{200}$. This sample of clusters contains some objects that have already been previously considered for the search of diffuse $\gamma$-ray emission, with searches campaings perfomed [joint](https://arxiv.org/abs/1308.5654) and [individually](https://arxiv.org/abs/1510.00004), and by satellite-based (e.g., [Fermi-LAT](https://arxiv.org/abs/1507.08995)) and IACTs (e.g., [HESS](https://arxiv.org/abs/1205.5283), [MAGIC](https://arxiv.org/abs/1806.11063)). 
 
 ## CR Models
 
