@@ -31,7 +31,7 @@ Some packages already included in `gammapy` that we also use are:
 - `astropy`
 - `healpy`
 
-All of these softwares and packages can be installed with `conda env` and/or `pip install` (please check instructions for each one individually).
+All of these softwares and packages can be installed with `conda env` and/or `pip install` (please check instructions for each one individually), but we strongly recommend to use `conda env`.
 
 ## Sample selection
 The sample contains 48 galaxy clusters is build following the steps described in [1], but here we provide some insight on the selection criteria. All of the that clusters were selected fullfill the following criteria:
@@ -91,6 +91,21 @@ where $\Delta\Omega = 2\pi(1−\cos\alpha_{int})$, where $\alpha_{int}$ is the i
 For the spatial component, we elaborate our models using `CLUMPY`. The spatial models that we have used can be find in the folder *X* of this repository. To compute the DM-induced emission, we need to choose also the spectral parameters as the $m_{\chi}$ and the annihhilation/decay channel. We perform this step using `gammapy` and making use of the results of [5] for $dN_{\gamma}/dE$, which can be found in the repository [CosmiXs](https://github.com/ajueid/CosmiXs), which can be done using the tutorial notebook *XX*.
 
 ### Note about the use of CosmiXs
+`gammapy`package is originally build to operate using the [PPPC 4 DM ID](http://www.marcocirelli.net/PPPC4DMID.html) tables (see [_Cirelli et al._ 2012](https://arxiv.org/abs/1012.4515)) for the computation of $d\phi_{\gamma}/dE$. CosmiXs results, once would need to modify slightly the content of the table they provide for the $\gamma$-ray production. In this respository, we provide already with the proper modification of the file. To use it in `gammapy`, you will need to:
+
+1 - Go to the directory `<your_path_to_anacodna>/anaconda3/envs/name_second_installation/lib/python3.9/site-packages/gammapy/astro/darkmatter`
+
+2 - Replace the spectra.py in your folder for the one in this repo in the folder `Installation`.
+
+3 - Open command line and activate your `gammapy conda env`
+
+4 - Go to a selected folder in your local machine where you can download the necessary files, and type in command line: `gammapy download datasets`
+
+5 - Go to `<your_folder_downloads/1.1/dark_matter_spectra>`
+
+6 - Replace the AtProduction_gammas.dat in your folder for the one in this repo in the folder `Installation`.
+
+To work woth DM spectra models with `gammapy`, is also very convinient to define the global variable `GAMMAPY_DATA`in your bash profile (see https://docs.gammapy.org/1.3/getting-started/index.html#getting-started).
 
 ## Important literature
 [1] Constraining the dark matter contribution of $\gamma$-rays in Cluster of galaxies using _Fermi_-LAT data. M. di Mauro, J. Pérez-Romero, M. A. Sánchez-Conde, N. Fornengo. Phys. Rev. D 107, 083030. [https://arxiv.org/abs/2303.16930]
