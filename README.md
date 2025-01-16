@@ -120,7 +120,7 @@ To work woth DM spectra models with `gammapy`, is also very convinient to define
 
 
 ## Ackowledgements
-This repository is supported by Judit Pérez-Romero, with the collaboration of R. Adam and M. A. Sánchez-Conde. This repository is supported by the European Union's Horizon Europe research and innovation programme under the Marie Skłodowska-Curie Postdoctoral Fellowship Programme, SMASH co-funded under the grant agreement No. 101081355.
+This repository is supported by Judit Pérez-Romero, with the collaboration of R. Adam and M. A. Sánchez-Conde. This repository is supported by the European Union's Horizon Europe research and innovation programme under the Marie Skłodowska-Curie Postdoctoral Fellowship Programme, SMASH co-funded under the grant agreement No. 101081355. This repository is possible also thanks to the IFPU Team Research Program: Exploring the gamma-ray emission from galaxy clusters: from characterizing cosmic ray populations to constraining the nature of dark matter.
 
 ### Reference
 In case you use models, data or codes from this repository in your research, please cite us to acknowledge its use. 
